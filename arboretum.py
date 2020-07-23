@@ -43,11 +43,10 @@ class Arboretum:
 
     def annex_coastline(self, coastline):
         self.__coastlines.append(coastline)
- 
+
     @property
     def rivers(self):
         return self.__rivers
 
     def annex_river(self, river):
         self.__rivers.append(river)
-
