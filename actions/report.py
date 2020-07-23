@@ -1,7 +1,8 @@
 def build_facility_report(arboretum):
     for river in arboretum.rivers:
         print(f'{river.name} - {river.id}')
-        print(f"This place has {len(river.animals)} animals in it")
+        print(
+            f"This place has {len(river.animals)} animals and {len(river.plants)} plants in it")
 
     for swamp in arboretum.swamps:
         print(f'{swamp.name} - {swamp.id}]')
