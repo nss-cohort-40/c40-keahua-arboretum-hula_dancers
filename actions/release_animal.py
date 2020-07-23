@@ -1,4 +1,4 @@
-from animals import RiverDolphin
+from animals.river_dolphin import RiverDolphin
 
 def release_animal(arboretum):
     animal = None

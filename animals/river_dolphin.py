@@ -1,5 +1,5 @@
-from animals import Animal
-from animals import Freshwater
+from animals.animal import Animal
+from traits.freshwater import Freshwater
 from identifiable import Identifiable
 
 
