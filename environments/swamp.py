@@ -1,7 +1,7 @@
 # from environments import Stagnant
 # sys.path.append('../')
 from .environment import Environment
-from animals import Aquatic
+# from animals import Aquatic
 
 
 class Swamp(Environment):
