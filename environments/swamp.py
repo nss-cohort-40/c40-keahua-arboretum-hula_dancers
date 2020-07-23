@@ -1,28 +1,12 @@
 # from environments import Stagnant
-# from environments.environment import Environment
-# import sys
 # sys.path.append('../')
+from .environment import Environment
 from animals import Aquatic
-from animals import Identifiable
-from environments import ContainsAnimals
-from environments import ContainsPlants
-
-# from animals.
 
 
-class Swamp(ContainsAnimals, ContainsPlants, Identifiable):
-    # ADD NAME ARG POTENTIALLY
-    def __init__(self
-                 ):
-        # self.name = name
-        # WE DON'T NEED THIS RN
-        self.inhabitants = []
-        ContainsAnimals.__init__(self)
-        ContainsPlants.__init__(self)
-        Identifiable.__init__(self)
-
-    def animal_count(self):
-        return "This place has a bunch of animals in it"
+class Swamp(Environment):
+    def __init__(self, name):
+        super().__init__(name)
 
     def addInhabitant(self, item):
         if not isinstance(item, IStagnant):
