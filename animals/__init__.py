@@ -1,4 +1,3 @@
-from .identifiable import Identifiable
 from .animal import Animal
 from .terrestrial import Terrestrial
 from .aquatic import Aquatic
