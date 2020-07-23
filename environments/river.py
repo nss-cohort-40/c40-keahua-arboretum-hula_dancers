@@ -1,6 +1,6 @@
-from animals import Aquatic
+# from traits.aquatic import Aquatic
 from .environment import Environment
-from animals import RiverDolphin
+# from animals.river_dolphin import RiverDolphin
 
 
 class River(Environment):
