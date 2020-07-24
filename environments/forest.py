@@ -20,7 +20,7 @@ class Forest(Environment, ContainsPlants):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if plant.species == "Rainbow Eucalyptus Tree":
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
