@@ -1,5 +1,6 @@
 from .environment import Environment
-#
+# 1. Create function that limits plants CAPACITY (32 plants)
+# 2. Create function that limits animals CAPACITY (20 animals)
 #
 
 
