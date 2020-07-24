@@ -1,12 +1,14 @@
 from .environment import Environment
+from environments import ContainsPlants
 #
 #
 
 
-class Grassland(Environment):
+class Grassland(Environment, ContainsPlants):
 
     def __init__(self, name):
-        super().__init__(name)
+        Environment.__init__(self, name)
+        ContainsPlants.__init__(self)
 
     def add_animal(self, animal):
         try:
