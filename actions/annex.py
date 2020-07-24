@@ -18,6 +18,7 @@ def annex_habitat(arboretum):
         river = River(name)
         arboretum.selected_biome = "river"
         arboretum.rivers.append(river)
+        arboretum.biome_type = river
     if choice == "2":
         swamp = Swamp(name)
         arboretum.selected_biome = swamp

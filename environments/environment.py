@@ -10,6 +10,7 @@ class Environment(ContainsAnimals, ContainsPlants, Identifiable):
         ContainsPlants.__init__(self)
         Identifiable.__init__(self)
         self.name = name
+        
 
     # NOT SURE IF THIS FUNC IS NEEDED?
     # def animal_count(self):

@@ -7,7 +7,7 @@ class River(Environment):
 
     def __init__(self, name):
         super().__init__(name)
-        biome_type = river
+        self.biome_type = "River"
 
     def add_animal(self, animal):
         try:
