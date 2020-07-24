@@ -24,11 +24,10 @@ def release_animal(arboretum):
             print("\n\nAnimal is too young to be released. Please choose a older animal.")
             input("\n\nPress any key to continue...")
             release_animal(arboretum)
-            #return to release_animal menu
         else:
             rivers_and_swamps = arboretum.rivers + arboretum.swamps
             for index, river_swamp in enumerate(rivers_and_swamps):
-                print(f'{index + 1}. River/Swamp: {river_swamp.name} - {river_swamp.id}')
+                print(f'{index + 1}. River/Swamp: {river_swamp.name} ({len(river_swamp.animals)} animals)')
             print("Release the animal into which biome?")
             choice = input("> ")
             rivers_and_swamps[int(choice) - 1].animals.append(animal)
