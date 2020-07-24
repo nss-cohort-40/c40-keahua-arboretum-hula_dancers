@@ -3,7 +3,7 @@ from .environment import Environment
 #
 
 
-class Mountian(Environment):
+class Mountain(Environment):
 
     def __init__(self, name):
         super().__init__(name)

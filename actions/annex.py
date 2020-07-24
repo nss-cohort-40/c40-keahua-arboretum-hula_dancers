@@ -4,7 +4,7 @@ from environments.swamp import Swamp
 from environments.coastline import Coastline
 from environments.grassland import Grassland
 from environments.forest import Forest
-from environments.mountain import Mountian
+from environments.mountain import Mountain
 
 
 def annex_habitat(arboretum):
