@@ -4,11 +4,12 @@ class Animal:
 
     def __init__(self, species):
         self.species = species
-        self.age = 0
+        self.age_in_months = 0
+        self.minimum_age_in_months = 0
         self.__prey = {}
 
     def move(self, propulsion, speed):
-        return f"{self. species} moves at {speed} meters/sec by {propulsion}"
+        return f"{self.species} moves at {speed} meters/sec by {propulsion}"
 
     @property
     def prey(self):
@@ -16,4 +17,4 @@ class Animal:
 
     def feed(self, prey):
         if prey in self.__prey:
-            print(f'The {species} ate {prey} for a meal')
+            print(f'The {self.species} ate {prey} for a meal')
