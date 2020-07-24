@@ -15,7 +15,7 @@ def build_facility_report(arboretum):
     for forest in arboretum.forests:
         print(f'{forest.name} - {forest.id}]')
 
-    for mountian in arboretum.mountians:
-        print(f'{mountian.name} - {mountian.id}]')
+    for mountain in arboretum.mountains:
+        print(f'{mountain.name} - {mountain.id}]')
 
     input("\n\nPress any key to continue...")

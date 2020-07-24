@@ -35,5 +35,5 @@ def annex_habitat(arboretum):
         forest = Forest(name)
         arboretum.forests.append(forest)
     if choice == "6":
-        mountian = Mountian(name)
-        arboretum.mountains.append(mountian)
+        mountain = Mountain(name)
+        arboretum.mountains.append(mountain)
