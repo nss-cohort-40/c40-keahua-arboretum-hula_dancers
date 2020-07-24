@@ -10,8 +10,8 @@ class RiverDolphin(Animal, Freshwater, Identifiable):
         Freshwater.__init__(self)
         Identifiable.__init__(self)
         Animal.__prey = {"Trout", "Mackarel", "Salmon", "Sardine"}
-        self.minimum_age_in_months = 8
-   
+        self.minimum_age_in_months = 13
+
     @property
     def prey(self):
         return self.__prey

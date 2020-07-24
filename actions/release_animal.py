@@ -1,5 +1,11 @@
+from animals.pueo import Pueo
 from animals.river_dolphin import RiverDolphin
-# from animals.Pueo import Pueo
+from animals.ulae import Ulae
+from animals.gold_dust_day_gecko import Gold_dust_day_gecko
+from animals.nene_goose import Nene_goose
+from animals.kikakapu import Kikakapu
+from animals.opeapea import Opeapea
+from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
 
 def release_animal(arboretum):
@@ -18,25 +24,122 @@ def release_animal(arboretum):
 
     if choice == "1":
         animal = RiverDolphin()
-        animal_age_in_months = input("Enter animal age in months > ") 
-        animal_age_int = int(animal_age_in_months)
-        if animal_age_int < animal.minimum_age_in_months:
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
             print("\n\nAnimal is too young to be released. Please choose a older animal.")
             input("\n\nPress any key to continue...")
             release_animal(arboretum)
+<<<<<<< HEAD
         else:
             rivers_and_swamps = arboretum.rivers + arboretum.swamps
             for index, river_swamp in enumerate(rivers_and_swamps):
                 print(f'{index + 1}. River/Swamp: {river_swamp.name} ({len(river_swamp.animals)} animals)')
+=======
+            # return to release_animal menu
+        else:
+            rivers_and_swamps = arboretum.rivers + arboretum.swamps
+            for index, river_swamp in enumerate(rivers_and_swamps):
+                print(
+                    f'{index + 1}. River/Swamp: {river_swamp.name} - {river_swamp.id}')
+>>>>>>> master
             print("Release the animal into which biome?")
             choice = input("> ")
             rivers_and_swamps[int(choice) - 1].animals.append(animal)
 
     if choice == "2":
-        pass
+        animal = Pueo()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
 
+    if choice == "3":
+        animal = Ulae()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
+    if choice == "4":
+        animal = Gold_dust_day_gecko()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
 
-        
+    if choice == "5":
+        animal = Nene_goose()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
 
+    if choice == "6":
+        animal = Kikakapu()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
 
+    if choice == "7":
+        animal = Opeapea()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
 
+    if choice == "8":
+        animal = Kikakapu()
+        animal_age_in_months = input("Enter animal age in months > ")
+        animal_age_float = float(animal_age_in_months)
+        if animal_age_float < animal.minimum_age_in_months:
+            print("\n\nAnimal is too young to be released. Please choose a older animal.")
+            input("\n\nPress any key to continue...")
+            release_animal(arboretum)
+            # return to release_animal menu
+        else:
+            # TODO: Display all of the locations in which the animals can be stored.
+            # TODO: Display The current number of animals
+            pass
