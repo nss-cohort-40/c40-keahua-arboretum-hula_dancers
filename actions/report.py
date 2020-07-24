@@ -6,4 +6,7 @@ def build_facility_report(arboretum):
     for swamp in arboretum.swamps:
         print(f'{swamp.name} - {swamp.id}]')
 
+    for coastline in arboretum.coastlines:
+        print(f'{coastline.name} - {coastline.id}]')
+
     input("\n\nPress any key to continue...")
