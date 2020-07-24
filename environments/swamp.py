@@ -7,6 +7,7 @@ from .environment import Environment
 class Swamp(Environment):
     def __init__(self, name):
         super().__init__(name)
+        self.biome_type = "Swamp"
 
     def addInhabitant(self, item):
         if not isinstance(item, IStagnant):

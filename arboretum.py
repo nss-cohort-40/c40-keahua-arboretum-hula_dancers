@@ -50,3 +50,5 @@ class Arboretum:
 
     def annex_river(self, river):
         self.__rivers.append(river)
+
+
