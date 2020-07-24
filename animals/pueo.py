@@ -10,7 +10,8 @@ class Pueo(Animal, Identifiable): #add Freshwater
         # Grassland.__init__(self)
         # Forest.__init__(self)
         Identifiable.__init__(self)
-        self.__prey = {"rat", "mouse", "voles"}
+        Animal.prey = {}
+        
 
         
 
