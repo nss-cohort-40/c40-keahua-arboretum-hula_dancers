@@ -4,6 +4,8 @@ def build_facility_report(arboretum):
         print(f"This place has {len(river.animals)} animals in it")
 
     for swamp in arboretum.swamps:
-        print(f'{swamp.name} - {swamp.id.__getitem__(0:9)}')
+        swamp_id = str(swamp.id)
+        print(swamp_id)
+        print(f'{swamp.name} - {swamp_id[:9]}')
 
     input("\n\nPress any key to continue...")
