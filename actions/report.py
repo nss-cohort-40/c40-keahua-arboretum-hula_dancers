@@ -9,4 +9,13 @@ def build_facility_report(arboretum):
     for coastline in arboretum.coastlines:
         print(f'{coastline.name} - {coastline.id}]')
 
+    for grassland in arboretum.grasslands:
+        print(f'{grassland.name} - {grassland.id}]')
+
+    for forest in arboretum.forests:
+        print(f'{forest.name} - {forest.id}]')
+
+    for mountian in arboretum.mountians:
+        print(f'{mountian.name} - {mountian.id}]')
+
     input("\n\nPress any key to continue...")
