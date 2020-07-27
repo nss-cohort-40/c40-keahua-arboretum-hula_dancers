@@ -6,11 +6,11 @@ from environments import ContainsPlants
 # 2. Create function that limits animals CAPACITY (6 animals)
 
 
-class Mountain(Environment, ContainsPlants):
+class Mountain(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        ContainsPlants.__init__(self)
+        super().__init__(name)
+        self.biome_type = "Mountain"
 
     def add_animal(self, animal):
         try:

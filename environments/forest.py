@@ -6,11 +6,11 @@ from environments import ContainsPlants
 #
 
 
-class Forest(Environment, ContainsPlants):
+class Forest(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        ContainsPlants.__init__(self)
+        super().__init__(name)
+        self.biome_type = "Forest"
 
     def add_animal(self, animal):
         try:

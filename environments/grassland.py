@@ -6,11 +6,11 @@ from environments import ContainsPlants
 # 2. Create function that limits animals CAPACITY (22 animals)
 
 
-class Grassland(Environment, ContainsPlants):
+class Grassland(Environment):
 
     def __init__(self, name):
-        Environment.__init__(self, name)
-        ContainsPlants.__init__(self)
+        super().__init__(name)
+        self.biome_type = "Grassland"
 
     def add_animal(self, animal):
         try:

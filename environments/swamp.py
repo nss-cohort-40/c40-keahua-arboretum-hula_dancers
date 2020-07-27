@@ -7,10 +7,9 @@ from environments import ContainsPlants
 # 2. Create function that limits animals CAPACITY (8 animals)
 
 
-class Swamp(Environment, ContainsPlants):
+class Swamp(Environment):
     def __init__(self, name):
-        Environment.__init__(self, name)
-        ContainsPlants.__init__(self)
+        super().__init__(name)
         self.biome_type = "Swamp"
 
     # def addInhabitant(self, item):
