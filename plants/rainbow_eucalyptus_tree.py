@@ -8,3 +8,4 @@ class RainbowEucalyptusTree(Plant, Identifiable):
         Plant.__init__(self)
         Identifiable.__init__(self)
         self.sunlight = "shade"
+        self.species = "Rainbow Eucalyptus Tree"

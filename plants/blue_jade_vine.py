@@ -7,3 +7,4 @@ class BlueJadeVine(Plant, Identifiable):
         Plant.__init__(self)
         Identifiable.__init__(self)
         self.sunlight = "partial"
+        self.species = "Blue Jade Vine"
