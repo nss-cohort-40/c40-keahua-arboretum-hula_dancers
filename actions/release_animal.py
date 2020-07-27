@@ -22,6 +22,8 @@ def release_animal(arboretum):
 
     choice = input("Choose animal to release > ")
 
+
+
     if choice == "1":
         animal = RiverDolphin()
         animal_age_in_months = input("Enter animal age in months > ")
@@ -33,7 +35,7 @@ def release_animal(arboretum):
         else:
             rivers_and_swamps = arboretum.rivers + arboretum.swamps
             for index, river_swamp in enumerate(rivers_and_swamps):
-                print(f'{index + 1}. River/Swamp: {river_swamp.name} ({len(river_swamp.animals)} animals)')
+                print(f'{index + 1}. {river_swamp.name} {river_swamp.biome_type} ({len(river_swamp.animals)} animals)')
             print("Release the animal into which biome?")
             choice = input("> ")
             rivers_and_swamps[int(choice) - 1].animals.append(animal)
