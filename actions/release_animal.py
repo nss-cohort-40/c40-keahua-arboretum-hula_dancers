@@ -37,8 +37,8 @@ def release_animal(arboretum):
             for index, river_swamp in enumerate(rivers_and_swamps):
                 print(f'{index + 1}. {river_swamp.name} {river_swamp.biome_type} ({len(river_swamp.animals)} animals)')
             print("Release the animal into which biome?")
-            choice = input("> ")
-            rivers_and_swamps[int(choice) - 1].animals.append(animal)
+            biome_selection = input("> ")
+            rivers_and_swamps[int(biome_selection) - 1].animals.append(animal)
 
     if choice == "2":
         animal = Pueo()
