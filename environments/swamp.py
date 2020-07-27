@@ -3,6 +3,8 @@
 from .environment import Environment
 from environments import ContainsPlants
 # from animals import Aquatic
+# 1. Create function that limits plants CAPACITY (12 plants)
+# 2. Create function that limits animals CAPACITY (8 animals)
 
 
 class Swamp(Environment, ContainsPlants):

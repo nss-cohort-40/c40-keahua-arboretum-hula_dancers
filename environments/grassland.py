@@ -2,6 +2,8 @@ from .environment import Environment
 from environments import ContainsPlants
 #
 #
+# 1. Create function that limits plants CAPACITY (16 plants)
+# 2. Create function that limits animals CAPACITY (22 animals)
 
 
 class Grassland(Environment, ContainsPlants):
