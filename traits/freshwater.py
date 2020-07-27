@@ -1,7 +1,7 @@
-from traits.aquatic import Aquatic
+from .aquatic import Aquatic
 
 class Freshwater(Aquatic):
 
     def __init__(self):
         super().__init__()
-        self.cell_type = "hypertonic"
+        self.exists_in_freshwater = True

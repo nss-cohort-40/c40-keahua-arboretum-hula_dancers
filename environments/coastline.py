@@ -9,14 +9,15 @@ class Coastline(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.biome_type = "Coastline"
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and (animal.exists_in_saltwater):
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a river")
+                "Cannot add non-aquatic, or freshwater animals to a coastline")
 
     def add_plant(self, plant):
         try:
