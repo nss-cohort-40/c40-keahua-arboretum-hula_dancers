@@ -1,5 +1,4 @@
 from .environment import Environment
-from environments import ContainsPlants
 #
 #
 # 1. Create function that limits plants CAPACITY (4 plants)
