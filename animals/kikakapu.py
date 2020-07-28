@@ -9,3 +9,7 @@ class Kikakapu(Animal, Identifiable):
         Identifiable.__init__(self)
         self.__prey = ["Trout", "Mackerel", "Salmon"]
         self.minimum_age_in_months = 1
+
+    @property
+    def prey(self):
+        return self.__prey

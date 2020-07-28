@@ -9,6 +9,7 @@ from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
 
 def feed_animal(arboretum):
+    animal = None
 
     print("1. River Dolphin")
     print("2. Pueo")
@@ -21,29 +22,21 @@ def feed_animal(arboretum):
 
     choice = input("Choose an animal to feed > ")
 
-    def chosenAnimal(animal):
-        for index, prey in enumerate(animal.prey):
-            print(f"{index + 1}. {prey}")
-
-        choice_of_prey = input(
-            f"\nWhat's on the menu for the {animal.species} today? \n> ")
-
-        input(
-            f"\n>>> The {animal.species} devoured the {animal.prey[int(choice_of_prey) - 1].lower()} <<<\n\nPress enter to return to the main menu.")
-
     if choice == "1":
-        chosenAnimal(RiverDolphin())
+        animal = RiverDolphin()
     if choice == "2":
-        chosenAnimal(Pueo())
+        animal = Pueo()
     if choice == "3":
-        chosenAnimal(Ulae())
+        animal = Ulae()
     if choice == "4":
-        chosenAnimal(Gold_dust_day_gecko())
+        animal = Gold_dust_day_gecko()
     if choice == "5":
-        chosenAnimal(Nene_Goose())
+        animal = Nene_goose()
     if choice == "6":
-        chosenAnimal(Kikakapu())
+        animal = Kikakapu()
     if choice == "7":
-        chosenAnimal(Opeapea())
+        animal = Opeapea()
     if choice == "8":
-        chosenAnimal(Hawaiian_happyface_spider())
+        animal = Hawaiian_happyface_spider()
+
+    animal.feed(animal)

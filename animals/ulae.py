@@ -9,3 +9,7 @@ class Ulae(Animal, Identifiable):
         Identifiable.__init__(self)
         self.__prey = ["Salmon", "Mackerel", "Trout"]
         self.minimum_age_in_months = 1
+
+    @property
+    def prey(self):
+        return self.__prey

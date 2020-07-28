@@ -9,3 +9,7 @@ class Nene_goose(Animal, Identifiable):
         Identifiable.__init__(self)
         self.__prey = ["Berries", "Clovers", "Orchard Grass"]
         self.minimum_age_in_months = 7
+
+    @property
+    def prey(self):
+        return self.__prey
