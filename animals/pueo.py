@@ -13,3 +13,5 @@ class Pueo(Animal, Identifiable):  # add Freshwater
         Identifiable.__init__(self)
         Animal.prey = {}
         self.minimum_age_in_months = 8
+        self.exists_in_forest = True
+        self.exists_in_grassland = True

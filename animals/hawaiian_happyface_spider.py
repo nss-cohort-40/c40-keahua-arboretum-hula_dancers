@@ -10,3 +10,4 @@ class Hawaiian_happyface_spider(Animal, Identifiable):
         Animal.prey = {}
         self.minimum_age_in_months = 0.5
         self.IStagnant = True
+        self.exists_in_swamp = True

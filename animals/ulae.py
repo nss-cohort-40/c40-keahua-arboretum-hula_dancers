@@ -9,3 +9,4 @@ class Ulae(Animal, Identifiable):
         Identifiable.__init__(self)
         Animal.prey = {}
         self.minimum_age_in_months = 1
+        self.exists_in_coastline = True

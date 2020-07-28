@@ -10,3 +10,5 @@ class Kikakapu(Animal, Identifiable):
         Animal.prey = {}
         self.minimum_age_in_months = 1
         self.IStagnant = True
+        self.exists_in_swamp = True
+        self.exists_in_river = True

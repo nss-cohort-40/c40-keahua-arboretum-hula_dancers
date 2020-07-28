@@ -10,6 +10,14 @@ class Swamp(Environment):
         super().__init__(name)
         self.biome_type = "Swamp"
 
+    def add_animal(self, animal):
+        try:
+            if animal.exists_in_swamp:
+                self.animals.append(animal)
+        except AttributeError:
+            raise AttributeError(
+                "Animal cannot live in the swamp biome.")
+
     def addInhabitant(self, item):
         if not isinstance(item, IStagnant):
             raise TypeError(f"{item} is not of type IStagnant")

@@ -13,7 +13,7 @@ class Coastline(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and (animal.exists_in_saltwater):
+            if animal.aquatic and (animal.exists_in_saltwater) or animal.exists_in_coastline:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(

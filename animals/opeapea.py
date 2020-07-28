@@ -9,3 +9,5 @@ class Opeapea(Animal, Identifiable):
         Identifiable.__init__(self)
         Animal.prey = {}
         self.minimum_age_in_months = 5
+        self.exists_in_forest = True
+        self.exists_in_mountain = True
