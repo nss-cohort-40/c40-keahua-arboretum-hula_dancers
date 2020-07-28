@@ -8,6 +8,11 @@ class Hawaiian_happyface_spider(Animal, Identifiable):
         Animal.__init__(self, "Hawaiian Happy-face Spider")
         Identifiable.__init__(self)
         Animal.prey = {}
-        self.minimum_age_in_months = 0.5
         self.IStagnant = True
         self.exists_in_swamp = True
+        self.__prey = ["Flies", "Mosquitos", "Moths"]
+        self.minimum_age_in_months = .5
+
+    @property
+    def prey(self):
+        return self.__prey
