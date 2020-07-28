@@ -24,4 +24,10 @@ class Environment(ContainsAnimals, ContainsPlants, Identifiable):
             input(f'****        Please choose another one       ****')
         elif len(self.plants) < (self.max_capacity_of_plants):
             self.add_plant(plant)
-            input("> ")
+
+    def animal_max_capacity(self, animal):
+        if len(self.animals) >= (self.max_capacity_of_animals):
+            print(f'\n****      That biome is not large enough      ****')
+            input(f'****        Please choose another one       ****')
+        elif len(self.animals) < (self.max_capacity_of_animals):
+            self.add_plant(animal)

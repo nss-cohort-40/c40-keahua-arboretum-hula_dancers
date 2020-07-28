@@ -38,4 +38,3 @@ def cultivate_plant(arboretum):
     biome_selection = input("> ")
     biome_to_append = all_biomes[int(biome_selection) - 1]
     biome_to_append.plant_max_capacity(plant)
-    # biome_to_append.add_plant(plant)

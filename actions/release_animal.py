@@ -68,6 +68,6 @@ def release_animal(arboretum):
                 f'{index + 1}. {biome.name} {biome.biome_type} ({len(biome.animals)} animals)')
         print("Release the animal into which biome?")
         biome_selection = input("> ")
-        all_biomes[int(biome_selection) - 1].add_animal(animal)
+        biome_selection.animal_max_capacity(animal)
         # all_biomes[int(biome_selection) - 1].animals.append(animal)
         # input("\n\nPress any key to continue...")
