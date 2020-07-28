@@ -6,7 +6,7 @@ class Animal:
         self.species = species
         self.age_in_months = 0
         self.minimum_age_in_months = 0
-        self.__prey = {}
+        self.__prey = []
 
     def move(self, propulsion, speed):
         return f"{self.species} moves at {speed} meters/sec by {propulsion}"

@@ -1,3 +1,11 @@
+from animals.river_dolphin import RiverDolphin
+from animals.pueo import Pueo
+from animals.ulae import Ulae
+from animals.gold_dust_day_gecko import Gold_dust_day_gecko
+from animals.nene_goose import Nene_goose
+from animals.kikakapu import Kikakapu
+from animals.opeapea import Opeapea
+from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
 
 def feed_animal(arboretum):
@@ -13,29 +21,29 @@ def feed_animal(arboretum):
 
     choice = input("Choose an animal to feed > ")
 
-    def chosenAnimal(animal, arr):
-        for index, prey in arr.prey:
+    def chosenAnimal(animal):
+        for index, prey in enumerate(animal.prey):
             print(f"{index + 1}. {prey}")
 
         choice_of_prey = input(
-            f"What's on the menu for the {animal} today? \n> ")
+            f"\nWhat's on the menu for the {animal.species} today? \n> ")
 
         input(
-            f"The {animal} gobbled it up.\nPress enter to return to the main menu.")
+            f"\n>>> The {animal.species} devoured the {animal.prey[int(choice_of_prey) - 1].lower()} <<<\n\nPress enter to return to the main menu.")
 
     if choice == "1":
-        chosenAnimal("river dolphin")
+        chosenAnimal(RiverDolphin())
     if choice == "2":
-        chosenAnimal("pueo")
+        chosenAnimal(Pueo())
     if choice == "3":
-        chosenAnimal("ulae")
+        chosenAnimal(Ulae())
     if choice == "4":
-        chosenAnimal("gold dust day gecko")
+        chosenAnimal(Gold_dust_day_gecko())
     if choice == "5":
-        chosenAnimal("nene goose")
+        chosenAnimal(Nene_Goose())
     if choice == "6":
-        chosenAnimal("kikakapu")
+        chosenAnimal(Kikakapu())
     if choice == "7":
-        chosenAnimal("ope'ape'a")
+        chosenAnimal(Opeapea())
     if choice == "8":
-        chosenAnimal("Hawaiin happy face spider")
+        chosenAnimal(Hawaiian_happyface_spider())

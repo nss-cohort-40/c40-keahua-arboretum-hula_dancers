@@ -7,5 +7,5 @@ class Ulae(Animal, Identifiable):
     def __init__(self):
         Animal.__init__(self, "Ulae")
         Identifiable.__init__(self)
-        Animal.prey = {}
+        self.__prey = ["Salmon", "Mackerel", "Trout"]
         self.minimum_age_in_months = 1
