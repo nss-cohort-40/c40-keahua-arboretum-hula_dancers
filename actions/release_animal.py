@@ -7,6 +7,7 @@ from animals.kikakapu import Kikakapu
 from animals.opeapea import Opeapea
 from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
+
 def release_animal(arboretum):
     animal = None
 
@@ -22,7 +23,7 @@ def release_animal(arboretum):
     choice = input("Choose animal to release > ")
 
     if choice == "1":
-        animal = RiverDolphin() 
+        animal = RiverDolphin()
 
     if choice == "2":
         animal = Pueo()
@@ -38,7 +39,7 @@ def release_animal(arboretum):
 
     if choice == "6":
         animal = Kikakapu()
-   
+
         # else:
         #     rivers_and_swamps = arboretum.rivers + arboretum.swamps
         #     for index, river_swamp in enumerate(rivers_and_swamps):
@@ -46,7 +47,6 @@ def release_animal(arboretum):
         #     print("Release the animal into which biome?")
         #     biome_selection = input("> ")
         #     rivers_and_swamps[int(biome_selection) - 1].animals.append(animal)
-            
 
     if choice == "7":
         animal = Opeapea()
@@ -54,16 +54,18 @@ def release_animal(arboretum):
     if choice == "8":
         animal = Kikakapu()
 
-    all_biomes = arboretum.rivers + arboretum.forests + arboretum.coastlines + arboretum.swamps + arboretum.grasslands + arboretum.mountains
+    all_biomes = arboretum.rivers + arboretum.forests + arboretum.coastlines + \
+        arboretum.swamps + arboretum.grasslands + arboretum.mountains
     animal_age_in_months = input("Enter animal age in months > ")
     animal_age_float = float(animal_age_in_months)
     if animal_age_float < animal.minimum_age_in_months:
-            print("\n\nAnimal is too young to be released. Please choose a older animal.")
-            input("\n\nPress any key to continue...")
-            release_animal(arboretum)
+        print("\n\nAnimal is too young to be released. Please choose a older animal.")
+        input("\n\nPress any key to continue...")
+        release_animal(arboretum)
     else:
         for index, biome in enumerate(all_biomes):
-            print(f'{index + 1}. {biome.name} {biome.biome_type} ({len(biome.animals)} animals)')
+            print(
+                f'{index + 1}. {biome.name} {biome.biome_type} ({len(biome.animals)} animals)')
         print("Release the animal into which biome?")
         biome_selection = input("> ")
         all_biomes[int(biome_selection) - 1].add_animal(animal)
