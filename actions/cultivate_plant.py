@@ -28,12 +28,16 @@ def cultivate_plant(arboretum):
     if plant_selection == "4":
         plant = BlueJadeVine()
 
-    print(f'Where you would you like to plant this {plant.species}?')
-    mountains = arboretum.mountains
-    for index, mountain in enumerate(mountains):
-        if len(mountains) > 0:
-            print(f'{index + 1}. {mountain.name} {mountain.biome_type}')
-        else:
-            input(
-                "\n**There are currently no available mountain biomes to cultivate this plant in. ")
-    input("\n\nPress any key to continue...")
+    print(f'\n   - * C U L T I V A T E * -   \n')
+    all_biomes = arboretum.mountains + arboretum.grasslands + arboretum.swamps + \
+        arboretum.forests + arboretum.rivers + arboretum.coastlines
+    for index, biome in enumerate(all_biomes):
+        print(
+            f'{index + 1}. {biome.name} {biome.biome_type} ({len(biome.plants)} plants)')
+    print(f"Which biome would you like to cultivate your {plant.species} in?")
+    biome_selection = input("> ")
+    biome_to_append = all_biomes[int(biome_selection) - 1]
+    biome_to_append.add_plant(plant)
+    print(
+        f'\nNOICE. You added a {plant.species} to the {biome_to_append.name} {biome_to_append.biome_type}!')
+    input("\n** Press Enter **")

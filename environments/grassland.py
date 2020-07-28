@@ -22,8 +22,8 @@ class Grassland(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if plant.grassland_plant:
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+                f'A {plant.species} does not grow in grassland biomes.')
