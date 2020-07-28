@@ -14,11 +14,11 @@ class River(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and (animal.exists_in_freshwater):
+            if animal.exists_in_river:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a river")
+                "Animal cannot add non-aquatic, or saltwater animals to a river")
 
     def add_plant(self, plant):
         try:

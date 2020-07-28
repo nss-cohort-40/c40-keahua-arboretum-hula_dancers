@@ -13,11 +13,11 @@ class Forest(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.terrestrial or animal.walking or animal.flying:
+            if animal.exists_in_forest:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a river")
+                "Animal cannot exist in the swamp biome.")
 
     def add_plant(self, plant):
         try:

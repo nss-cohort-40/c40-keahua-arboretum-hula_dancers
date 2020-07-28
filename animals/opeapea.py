@@ -9,6 +9,8 @@ class Opeapea(Animal, Identifiable):
         Identifiable.__init__(self)
         self.__prey = ["Mosquitoes", "Beetles", "Moths"]
         self.minimum_age_in_months = 5
+        self.exists_in_forest = True
+        self.exists_in_mountain = True
 
     @property
     def prey(self):
