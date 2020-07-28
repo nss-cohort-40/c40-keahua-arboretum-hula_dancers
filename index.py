@@ -7,6 +7,7 @@ from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
+from actions.feed_animal import feed_animal
 from actions.cultivate_plant import cultivate_plant
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
@@ -32,10 +33,7 @@ def build_menu():
 
 
 def main_menu():
-    """Show Keahua Action Options
 
-    Arguments: None
-    """
     build_menu()
     choice = input(">> ")
 
@@ -46,15 +44,13 @@ def main_menu():
         release_animal(keahua)
 
     if choice == "3":
-        pass
+        feed_animal(keahua)
 
     if choice == "4":
         cultivate_plant(keahua)
-        pass
 
     if choice == "5":
         build_facility_report(keahua)
-        pass
 
     if choice != "6":
         main_menu()
