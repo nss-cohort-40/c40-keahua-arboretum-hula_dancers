@@ -1,8 +1,4 @@
 from .environment import Environment
-#
-#
-# 1. Create function that limits plants CAPACITY (3 plants)
-# 2. Create function that limits animals CAPACITY (15 animals)
 
 
 class Coastline(Environment):

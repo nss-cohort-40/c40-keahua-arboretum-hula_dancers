@@ -1,8 +1,4 @@
-# from traits.aquatic import Aquatic
 from .environment import Environment
-# from animals.river_dolphin import RiverDolphin
-# 1. Create function that limits plants CAPACITY (6 plants)
-# 2. Create function that limits animals CAPACITY (12 animals)
 
 
 class River(Environment):

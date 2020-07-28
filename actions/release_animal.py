@@ -61,4 +61,4 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         biome_selection = input("> ")
         biome_to_append = all_biomes[int(biome_selection) - 1]
-        biome_to_append.animal_max_capacity(animal)
+        biome_to_append.animal_max_capacity(animal, arboretum)
