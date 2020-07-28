@@ -14,7 +14,7 @@ class River(Environment):
 
     def add_animal(self, animal):
         try:
-            if (animal.aquatic and animal.exists_in_freshwater) or animal.exists_in_river:
+            if animal.exists_in_river:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
