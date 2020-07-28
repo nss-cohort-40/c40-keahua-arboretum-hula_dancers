@@ -1,10 +1,16 @@
 import os
+import textwrap
+import sys
+import time
+import random
 from arboretum import Arboretum
 from actions.annex import annex_habitat
 from actions.release_animal import release_animal
 from actions.report import build_facility_report
 
 keahua = Arboretum("Keahua Arboretum", "123 Paukauila Lane")
+
+screen_width = 100
 
 
 def build_menu():
@@ -16,12 +22,14 @@ def build_menu():
     print("5. Display Facility Report")
     print("6. Exit")
 
+##### MENU #####
+
 
 def main_menu():
-    """Show Keahua Action Options
+    # """Show Keahua Action Options
 
-    Arguments: None
-    """
+    # Arguments: None
+    # """
     build_menu()
     choice = input(">> ")
 
@@ -45,4 +53,13 @@ def main_menu():
         main_menu()
 
 
-main_menu()
+def main_menu_screen():
+    os.system('clear')
+    print('+ + + + + + + + + + + + + + + + + +')
+    print('| K e a h u a   A r b o r e t u m |')
+    print('+ + + + + + + + + + + + + + + + + +')
+    print('       Copyright 2020 NSS          ')
+    main_menu()
+
+
+main_menu_screen()
