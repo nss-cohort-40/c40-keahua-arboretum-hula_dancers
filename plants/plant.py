@@ -1,5 +1,10 @@
-class Plant:
+from identifiable import Identifiable
 
-    def __init__(self, species, season):
-        self.species = species
-        self.peak_season = season
+
+class Plant(Identifiable):
+
+    def __init__(self):
+        super().__init__()
+        self.species = ''
+        # self.peak_season = season
+        self.sunlight = ''
