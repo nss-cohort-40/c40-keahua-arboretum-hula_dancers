@@ -1,8 +1,4 @@
 from .environment import Environment
-#
-#
-# 1. Create function that limits plants CAPACITY (4 plants)
-# 2. Create function that limits animals CAPACITY (6 animals)
 
 
 class Mountain(Environment):
@@ -10,6 +6,8 @@ class Mountain(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.biome_type = "Mountain"
+        self.max_capacity_of_animals = 6
+        self.max_capacity_of_plants = 4
 
     def add_animal(self, animal):
         try:

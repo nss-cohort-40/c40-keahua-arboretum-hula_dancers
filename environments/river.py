@@ -1,8 +1,4 @@
-# from traits.aquatic import Aquatic
 from .environment import Environment
-# from animals.river_dolphin import RiverDolphin
-# 1. Create function that limits plants CAPACITY (6 plants)
-# 2. Create function that limits animals CAPACITY (12 animals)
 
 
 class River(Environment):
@@ -10,7 +6,8 @@ class River(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.biome_type = "River"
-        self.max_capacity_animals = 12
+        self.max_capacity_of_animals = 12
+        self.max_capacity_of_plants = 6
 
     def add_animal(self, animal):
         try:
