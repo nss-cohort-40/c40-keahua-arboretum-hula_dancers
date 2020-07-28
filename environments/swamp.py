@@ -22,9 +22,4 @@ class Swamp(Environment):
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
-                f"A {plant.species} will not survive on the coast!")
-
-    def addInhabitant(self, item):
-        if not isinstance(item, IStagnant):
-            raise TypeError(f"{item} is not of type IStagnant")
-        self.inhabitants.append(item)
+                f"A {plant.species} will not survive in a swamp.")

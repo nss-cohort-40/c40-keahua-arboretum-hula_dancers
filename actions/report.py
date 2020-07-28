@@ -4,7 +4,7 @@ def build_facility_report(arboretum):
     for biome in all_biomes:
         biome_id = str(biome.id)
         all_organisms = biome.animals + biome.plants
-        print(f'{biome.name} {biome.biome_type} - {biome_id[:8]}')
+        print(f'\n{biome.name} {biome.biome_type} - {biome_id[:8]}')
         for organism in all_organisms:
             organism_id = str(organism.id)
             print(f'    {organism.species} ({organism_id[:8]})')
