@@ -9,6 +9,7 @@ from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
 def release_animal(arboretum):
     animal = None
+    inhabitant = None
 
     print("1. River Dolphins")
     print("2. Pueo")
@@ -38,6 +39,7 @@ def release_animal(arboretum):
 
     if choice == "6":
         animal = Kikakapu()
+        inhabitant = Kikakapu()
    
         # else:
         #     rivers_and_swamps = arboretum.rivers + arboretum.swamps
@@ -52,7 +54,7 @@ def release_animal(arboretum):
         animal = Opeapea()
 
     if choice == "8":
-        animal = Kikakapu()
+        inhabitant = Hawaiian_happyface_spider()
 
     all_biomes = arboretum.rivers + arboretum.forests + arboretum.coastlines + arboretum.swamps + arboretum.grasslands + arboretum.mountains
     animal_age_in_months = input("Enter animal age in months > ")
