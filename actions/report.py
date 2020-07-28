@@ -8,4 +8,4 @@ def build_facility_report(arboretum):
         for organism in all_organisms:
             organism_id = str(organism.id)
             print(f'    {organism.species} ({organism_id[:8]})')
-    input("\n\nPress any key to continue...")
+    input("\n\n *** Press Enter to continue ***")
