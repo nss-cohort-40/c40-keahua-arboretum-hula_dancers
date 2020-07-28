@@ -13,7 +13,8 @@ class RiverDolphin(Animal, Freshwater, Identifiable, Saltwater):
         Identifiable.__init__(self)
         self.__prey = ["Trout", "Mackarel", "Salmon", "Sardines"]
         self.minimum_age_in_months = 13
-        self.cell_type = "both"
+        self.exists_in_coastline = True
+        self.exists_in_river = True
 
     @property
     def prey(self):

@@ -15,11 +15,11 @@ class Grassland(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.exists_in_grassland:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a river")
+                "Animal cannot live in the grassland biome")
 
     def add_plant(self, plant):
         try:

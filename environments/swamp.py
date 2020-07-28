@@ -15,24 +15,16 @@ class Swamp(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.exists_in_freshwater:
+            if animal.exists_in_swamp:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a swamp")
+                "Animal cannot live in the swamp biome.")
 
-    def add_plant(self, plant):
-        try:
-            if plant.swamp_plant:
-                self.plants.append(plant)
-        except AttributeError:
-            raise AttributeError(
-                f'A {plant.species} will not be able to live a fraction of its best life in a swamp.')
-
-    # def addInhabitant(self, item):
-    #     if not isinstance(item, IStagnant):
-    #         raise TypeError(f"{item} is not of type IStagnant")
-    #     self.inhabitants.append(item)
+    def addInhabitant(self, item):
+        if not isinstance(item, IStagnant):
+            raise TypeError(f"{item} is not of type IStagnant")
+        self.inhabitants.append(item)
 
     # def __str__(self):
     #     return self.name

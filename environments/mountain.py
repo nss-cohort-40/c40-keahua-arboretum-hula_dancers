@@ -15,11 +15,11 @@ class Mountain(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.exists_in_mountain:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
-                "Cannot add non-aquatic, or saltwater animals to a river")
+                "Animal cannot exist in mountain biome")
 
     def add_plant(self, plant):
         try:
