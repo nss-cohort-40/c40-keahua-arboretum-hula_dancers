@@ -10,6 +10,8 @@ class Mountain(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.biome_type = "Mountain"
+        Environment.max_capacity_of_animals = 6
+        Environment.max_capacity_of_plants = 4
 
     def add_animal(self, animal):
         try:

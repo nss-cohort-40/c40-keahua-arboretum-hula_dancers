@@ -10,6 +10,8 @@ class Forest(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.biome_type = "Forest"
+        Environment.max_capacity_of_animals = 20
+        Environment.max_capacity_of_plants = 32
 
     def add_animal(self, animal):
         try:
