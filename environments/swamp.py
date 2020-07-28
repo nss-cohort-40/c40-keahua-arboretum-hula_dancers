@@ -19,6 +19,14 @@ class Swamp(Environment):
             raise AttributeError(
                 "Animal cannot live in the swamp biome.")
 
+    def add_plant(self, plant):
+        try:
+            if plant.swamp_plant:
+                self.plants.append(plant)
+        except AttributeError:
+            raise AttributeError(
+                f"A {plant.species} will not survive on the coast!")
+
     def addInhabitant(self, item):
         if not isinstance(item, IStagnant):
             raise TypeError(f"{item} is not of type IStagnant")
