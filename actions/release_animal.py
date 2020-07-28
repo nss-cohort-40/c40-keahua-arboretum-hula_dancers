@@ -58,5 +58,4 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         biome_selection = input("> ")
         all_biomes[int(biome_selection) - 1].add_animal(animal)
-    print(" woot woot")
-    input("\n\nPress any key to continue...")
+
