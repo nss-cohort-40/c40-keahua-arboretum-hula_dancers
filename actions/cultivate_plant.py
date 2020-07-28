@@ -28,7 +28,7 @@ def cultivate_plant(arboretum):
     if plant_selection == "4":
         plant = BlueJadeVine()
 
-    print(f'\n   - * C U L T I V A T E * -   \n')
+    print(f'\n- * C U L T I V A T E * -\n')
     all_biomes = arboretum.mountains + arboretum.grasslands + arboretum.swamps + \
         arboretum.forests + arboretum.rivers + arboretum.coastlines
     for index, biome in enumerate(all_biomes):
@@ -38,6 +38,3 @@ def cultivate_plant(arboretum):
     biome_selection = input("> ")
     biome_to_append = all_biomes[int(biome_selection) - 1]
     biome_to_append.add_plant(plant)
-    print(
-        f'\nNOICE. You added a {plant.species} to the {biome_to_append.name} {biome_to_append.biome_type}!')
-    input("\n** Press Enter **")

@@ -6,8 +6,11 @@ def build_facility_report(arboretum):
 
     for swamp in arboretum.swamps:
         swamp_id = str(swamp.id)
+        swamp_inhabitants = swamp.animals + swamp.plants
         print(f'{swamp.name} - {swamp_id[:8]}')
-        print(f"There are {len(swamp.animals)} animals here.")
+        # print(f"There are {len(swamp.animals)} animals here.")
+        for inhabitant in swamp_inhabitants:
+            print(f'    {inhabitant.species}')
 
     for coastline in arboretum.coastlines:
         coastline_id = str(coastline.id)
