@@ -21,8 +21,14 @@ class Grassland(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if len(self.plants) >= 16:
+                print(f'\n****      That biome is not large enough      ****')
+                input(f'****        Please choose another one       ****')
+            if plant.grassland_plant and len(self.plants) < 16:
                 self.plants.append(plant)
+                print(
+                    f'\nNOICE. You added a {plant.species} to the {self.name} {self.biome_type}!')
+                input("\n** Press Enter **")
         except AttributeError:
             raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+                f'A {plant.species} does not grow in grassland biomes.')

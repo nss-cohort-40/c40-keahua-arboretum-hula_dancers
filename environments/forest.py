@@ -1,4 +1,5 @@
 from .environment import Environment
+#
 # 1. Create function that limits plants CAPACITY (32 plants)
 # 2. Create function that limits animals CAPACITY (20 animals)
 #
@@ -20,8 +21,8 @@ class Forest(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if plant.forest_plant:
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+                f"A {plant.species} will not survive in a forest biome. Please choose a different biome.")
