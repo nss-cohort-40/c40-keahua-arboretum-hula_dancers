@@ -9,6 +9,7 @@ class Grassland(Environment):
 
     def __init__(self, name):
         super().__init__(name)
+        self.biome_type = "Grassland"
 
     def add_animal(self, animal):
         try:

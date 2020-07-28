@@ -9,6 +9,7 @@ class Environment(ContainsAnimals, ContainsPlants, Identifiable):
         ContainsAnimals.__init__(self)
         ContainsPlants.__init__(self)
         Identifiable.__init__(self)
+        self.max_capacity_of_animals = 0
         self.name = name
         
 
