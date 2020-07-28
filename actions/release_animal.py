@@ -39,20 +39,12 @@ def release_animal(arboretum):
 
     if choice == "6":
         animal = Kikakapu()
-
-        # else:
-        #     rivers_and_swamps = arboretum.rivers + arboretum.swamps
-        #     for index, river_swamp in enumerate(rivers_and_swamps):
-        #         print(f'{index + 1}. {river_swamp.name} {river_swamp.biome_type} ({len(river_swamp.animals)} animals)')
-        #     print("Release the animal into which biome?")
-        #     biome_selection = input("> ")
-        #     rivers_and_swamps[int(biome_selection) - 1].animals.append(animal)
-
+   
     if choice == "7":
         animal = Opeapea()
 
     if choice == "8":
-        animal = Kikakapu()
+        animal = Hawaiian_happyface_spider()
 
     all_biomes = arboretum.rivers + arboretum.forests + arboretum.coastlines + \
         arboretum.swamps + arboretum.grasslands + arboretum.mountains
@@ -69,5 +61,4 @@ def release_animal(arboretum):
         print("Release the animal into which biome?")
         biome_selection = input("> ")
         all_biomes[int(biome_selection) - 1].add_animal(animal)
-        # all_biomes[int(biome_selection) - 1].animals.append(animal)
-        # input("\n\nPress any key to continue...")
+

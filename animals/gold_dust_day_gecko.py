@@ -13,6 +13,7 @@ class Gold_dust_day_gecko(Animal, Identifiable, Terrestrial, Walking):
         self.minimum_age_in_months = 2
         Terrestrial.__init__(self)
         Walking.__init__(self, leg_count=4)
+        self.exists_in_forest = True
 
     @property
     def prey(self):
