@@ -14,7 +14,7 @@ class Forest(Environment):
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.terrestrial or animal.walking or animal.flying:
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(

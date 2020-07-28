@@ -10,10 +10,11 @@ class River(Environment):
     def __init__(self, name):
         super().__init__(name)
         self.biome_type = "River"
+        self.max_capacity_animals = 12
 
     def add_animal(self, animal):
         try:
-            if animal.aquatic and animal.cell_type == "hypertonic":
+            if animal.aquatic and (animal.exists_in_freshwater):
                 self.animals.append(animal)
         except AttributeError:
             raise AttributeError(
