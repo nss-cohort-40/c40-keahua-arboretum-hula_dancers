@@ -21,7 +21,7 @@ class Coastline(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if plant.coastline_plant:
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
