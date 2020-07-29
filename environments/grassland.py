@@ -21,9 +21,6 @@ class Grassland(Environment):
         try:
             if plant.grassland_plant:
                 self.plants.append(plant)
-                print(
-                    f'\nNOICE. You added a {plant.species} to the {self.name} {self.biome_type}!')
-                input("\n** Press Enter **")
         except AttributeError:
             raise AttributeError(
                 f'A {plant.species} does not grow in grassland biomes.')

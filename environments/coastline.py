@@ -19,8 +19,8 @@ class Coastline(Environment):
 
     def add_plant(self, plant):
         try:
-            if plant.freshwater and plant.requires_current:
+            if plant.coastline:
                 self.plants.append(plant)
         except AttributeError:
             raise AttributeError(
-                "Cannot add plants that require brackish water or stagnant water to a river biome")
+                f"A {plant.species} will not survive on the coast!")
