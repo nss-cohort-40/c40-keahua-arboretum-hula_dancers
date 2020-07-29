@@ -12,6 +12,7 @@ class Hawaiian_happyface_spider(Animal, Identifiable):
         self.exists_in_swamp = True
         self.__prey = ["Flies", "Mosquitos", "Moths"]
         self.minimum_age_in_months = .5
+        self.biome_type = ["Swamp"]
 
     @property
     def prey(self):

@@ -7,7 +7,6 @@ from animals.kikakapu import Kikakapu
 from animals.opeapea import Opeapea
 from animals.hawaiian_happyface_spider import Hawaiian_happyface_spider
 
-
 def release_animal(arboretum):
     animal = None
 
@@ -48,6 +47,7 @@ def release_animal(arboretum):
 
     all_biomes = arboretum.rivers + arboretum.forests + arboretum.coastlines + \
         arboretum.swamps + arboretum.grasslands + arboretum.mountains
+
     animal_age_in_months = input("Enter animal age in months > ")
     animal_age_float = float(animal_age_in_months)
     if animal_age_float < animal.minimum_age_in_months:
@@ -55,10 +55,15 @@ def release_animal(arboretum):
         input("\n\nPress any key to continue...")
         release_animal(arboretum)
     else:
-        for index, biome in enumerate(all_biomes):
-            print(
-                f'{index + 1}. {biome.name} {biome.biome_type} ({len(biome.animals)} animals)')
+        biomes_list = []
+        for biome in all_biomes:
+            for animal_biome in animal.biome_type:
+                if (biome.biome_type == animal_biome):
+                    biome_to_add1 = biome
+                    biomes_list.append(biome_to_add1)
+        for index, selected_biome in enumerate(biomes_list):
+            print(f'{index + 1}. {selected_biome.name} {selected_biome.biome_type} ({len(selected_biome.animals)} animals)')
         print("Release the animal into which biome?")
         biome_selection = input("> ")
-        biome_to_append = all_biomes[int(biome_selection) - 1]
+        biome_to_append = biomes_list[int(biome_selection) - 1]
         biome_to_append.animal_max_capacity(animal, arboretum)

@@ -10,6 +10,7 @@ class Ulae(Animal, Identifiable):
         self.__prey = ["Salmon", "Mackerel", "Trout"]
         self.minimum_age_in_months = 1
         self.exists_in_coastline = True
+        self.biome_type = ["Coastline"]
 
     @property
     def prey(self):

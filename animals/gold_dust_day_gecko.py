@@ -14,6 +14,7 @@ class Gold_dust_day_gecko(Animal, Identifiable, Terrestrial, Walking):
         Terrestrial.__init__(self)
         Walking.__init__(self, leg_count=4)
         self.exists_in_forest = True
+        self.biome_type = ["Forest"]
 
     @property
     def prey(self):
