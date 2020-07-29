@@ -15,6 +15,7 @@ class Pueo(Animal, Identifiable):  # add Freshwater
         self.minimum_age_in_months = 8
         self.exists_in_forest = True
         self.exists_in_grassland = True
+        self.biome_type = ["Forest", "Grassland"]
 
     @property
     def prey(self):

@@ -11,6 +11,7 @@ class Opeapea(Animal, Identifiable):
         self.minimum_age_in_months = 5
         self.exists_in_forest = True
         self.exists_in_mountain = True
+        self.biome_type = ["Forest", "Mountain"]
 
     @property
     def prey(self):

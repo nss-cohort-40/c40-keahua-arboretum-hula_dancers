@@ -10,6 +10,7 @@ class Nene_goose(Animal, Identifiable):
         self.__prey = ["Berries", "Clovers", "Orchard Grass"]
         self.minimum_age_in_months = 7
         self.exists_in_grassland = True
+        self.biome_type = ["Grassland"]
 
     @property
     def prey(self):

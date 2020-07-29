@@ -12,6 +12,8 @@ class Kikakapu(Animal, Identifiable):
         self.IStagnant = True
         self.exists_in_swamp = True
         self.exists_in_river = True
+        self.biome_type = ["Swamp", "River"]
+
 
     @property
     def prey(self):
